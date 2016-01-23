@@ -1,0 +1,4 @@
+[submodule "upstream"]
+	path = upstream
+	url = https://github.com/CS362-Winter-2016/cs362w16core.git
+	branch = master
