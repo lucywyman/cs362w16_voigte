@@ -128,4 +128,26 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state);
 /* Set array position of each player who won (remember ties!) to
    1, others to 0 */
 
+//
+// Begin cards functions
+//
+int adventurerCard(struct gameState *, int);
+/* Replaces the adventurerCard in cardEffect's massive switch statement */
+
+int councilRoomCard(struct gameState *, int, int);
+/* Replaces the councilRoomCard in cardEffect's massive switch statement */
+
+int feastCard(struct gameState *, int, int);
+/* Replaces the feastCard in cardEffect's massive switch statement */
+
+int mineCard(struct gameState *, int, int, int, int);
+/* Replaces the mineCard in cardEffect's massive switch statement */
+
+int remodelCard(struct gameState *, int, int, int, int);
+/* Replaces the remodelCard in cardEffect's massive switch statement */
+
+int gardensCard();
+/* Replaces the gardensCard in cardEffect's massive switch statement */
+
+
 #endif
