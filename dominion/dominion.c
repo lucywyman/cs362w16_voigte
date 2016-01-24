@@ -1187,7 +1187,7 @@ int updateCoins(int player, struct gameState *state, int bonus)
 int adventurerCard(struct gameState *state,
                    int currentPlayer)
 {
-    int cardDrawn, z = 0, drawnTreasure = 0;
+    int cardDrawn, z, drawnTreasure;
     int tempHand[MAX_HAND];
 
     while(drawnTreasure<2)
@@ -1222,10 +1222,9 @@ int adventurerCard(struct gameState *state,
     {
         // discard all cards in play that have been drawn
         state->discard[currentPlayer]
-                      [state->discardCount[currentPlayer]++]
-        = tempHand[z-1]; 
+                      [state->discardCount[currentPlayer]++] = tempHand[z]; 
 
-        z=z-1;
+        z = z-1;
     }
     return 0;
 }
@@ -1353,8 +1352,7 @@ int mineCard(struct gameState *state,
 
     if ((getCost(state->hand[currentPlayer][choice1]) + 3) > getCost(choice2))
     { return -1; }
-
-    gainCard(choice2, state, 2, currentPlayer);
+gainCard(choice2, state, 2, currentPlayer);
 
     //discard card from hand
     discardCard(handPos, currentPlayer, state, 0);
@@ -1406,7 +1404,7 @@ int remodelCard(struct gameState *state,
 }
 
 int gardensCard() {
-    return -1;
+    return 1;
 }
 
 //end of dominion.c

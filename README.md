@@ -17,3 +17,9 @@ $ git submodule init .
 $ ls
 dominion  README.md  upstream
 ```
+
+You don't need the submodule to use my dominion code, it's just there if you
+care.
+
+Changes are documented in `refactor.txt` as well the `git log` of this repo.
+`refactor.txt` is a bit more verbose.

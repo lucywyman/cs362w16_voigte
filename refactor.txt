@@ -1,0 +1,17 @@
+# Refactors
+
+## Assignment 1 Changes:
+
+- replaced the following functionality in cardEffect's switch with proper
+  functions:
+    - adventure
+    - council room
+    - feast
+    - mine
+    - remodel
+    - gardens
+
+This involved copying code over and adding arguments / creating variables until
+my linter / the compiler was happy.
+
+This implementation includes at least 2 incorrect pieces of code.
