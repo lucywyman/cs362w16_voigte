@@ -1,0 +1,38 @@
+Coverage discussion.
+CS 362 assignment 2.
+2016-02-01
+
+gcov Output
+-----------
+```
+$ gcov dominion.c
+File 'dominion.c'
+Lines executed:17.20% of 564
+Creating 'dominion.c.gcov'
+```
+
+Card Tests
+----------
+
+cardtest1: Segmentation fault (core dumped)
+    There is an indexing error in the function that this test calls, thus
+    causing the core dump.
+cardtest2: cardtest2: cardtest2.c:54: testMineCard: Assertion `status == 0' failed
+           Aborted (core dumped)
+    I'm actually not sure why this test fails...
+cardtest3: testSmithyCard passes.
+    Test passes. Tests aren't rigorous enough.
+cardtest4: testVillageCard passes
+    Test passes. Tests aren't rigorous enough.
+
+Unit Tests
+----------
+
+unittest1: testShuffle passes.
+    Test passes. Tests aren't rigorous enough.
+unittest2: testSupplyCount passes.
+    Test passes. Tests aren't rigorous enough.
+unittest3: testWhoseTurn passes.
+    Test passes. Tests aren't rigorous enough.
+unittest4: testfullDeckCount passes.
+    Test passes. Tests aren't rigorous enough.

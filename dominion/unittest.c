@@ -5,16 +5,16 @@
 #include <stdlib.h>
 
 int main (int argc, char** argv) {
-  struct gameState G;
+    struct gameState G;
 
-  int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
-	       sea_hag, tribute, smithy};
+    int k[10] = {adventurer, gardens, embargo, village, minion, mine, cutpurse, 
+             sea_hag, tribute, smithy};
 
-  printf ("Starting game.\n");
-  
-  int r = initializeGame(2, k, atoi(argv[1]), &G);
+    printf ("Starting game.\n");
 
-  assert (r == 0);
+    int r = initializeGame(2, k, atoi(argv[1]), &G);
 
-  return 0;
+    assert (r == 0);
+
+    return 0;
 }
