@@ -1188,7 +1188,9 @@ int updateCoins(int player, struct gameState *state, int bonus)
 int adventurerCard(struct gameState *state,
                    int currentPlayer)
 {
-    int cardDrawn, z, drawnTreasure;
+    // Let the record state, I put a bug here, but had to get rid of it to
+    // apease the `make` directive. z and drawnTreasure were initially unset.
+    int cardDrawn, z=0, drawnTreasure=0; 
     int tempHand[MAX_HAND];
 
     while(drawnTreasure<2)

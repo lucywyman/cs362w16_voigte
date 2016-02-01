@@ -1,4 +1,4 @@
-#include "assert.h"
+#include "myassert.h"
 #include "dominion.h"
 #include <stdio.h>
 #include "rngs.h"
@@ -31,13 +31,13 @@ int testWhoseTurn()
 
     status = initializeGame(2, k, rand, &G);
 
-    assert (status == 0);
+    myAssert (status == 0);
 
     // Fetch the current player's turn
     status = whoseTurn(&G);
 
     // Player 0's turn
-    assert (status == 0);
+    myAssert (status == 0);
 
     printf ("testWhoseTurn passes.\n");
 

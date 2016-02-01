@@ -1,4 +1,4 @@
-#include "assert.h"
+#include "myassert.h"
 #include "dominion.h"
 #include <stdio.h>
 #include "rngs.h"
@@ -31,11 +31,11 @@ int testFullDeckCount()
 
     status = initializeGame(2, k, rand, &G);
 
-    assert (status == 0);
+    myAssert (status == 0);
 
     status = fullDeckCount(0, copper, &G);
 
-    assert (status >= 0);
+    myAssert (status >= 0);
 
     int i, j, count = 0;
     for (i=0 ; i<G.deckCount[0] ; i++)
@@ -51,7 +51,7 @@ int testFullDeckCount()
         if (G.discard[0][i] == copper) count++;
     }
 
-    assert (status == count);
+    myAssert (status == count);
 
     printf ("testfullDeckCount passes.\n");
 

@@ -1,4 +1,4 @@
-#include "assert.h"
+#include "myassert.h"
 #include "dominion.h"
 #include <stdio.h>
 #include "rngs.h"
@@ -28,7 +28,7 @@ int testSupplyCount()
     status = supplyCount(copper, &G);
     // The function returned an error (-1)
 
-    assert (status == 2);
+    myAssert (status == 2);
     status = 0;
 
     printf ("testSupplyCount passes.\n");

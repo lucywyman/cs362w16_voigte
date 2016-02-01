@@ -1,4 +1,4 @@
-#include "assert.h"
+#include "myassert.h"
 #include "dominion.h"
 #include <stdio.h>
 #include "rngs.h"
@@ -44,7 +44,7 @@ int testShuffle()
 
     // If all of those cards are set to 1 (non-zero really)
     // set status to 1
-    assert (cardsSet[copper] && cardsSet[silver] && cardsSet[gold]);
+    myAssert (cardsSet[copper] && cardsSet[silver] && cardsSet[gold]);
     status = 0;
 
     printf ("testShuffle passes.\n");

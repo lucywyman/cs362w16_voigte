@@ -1,4 +1,4 @@
-#include "assert.h"
+#include "myassert.h"
 #include "dominion.h"
 #include "dominion_helpers.h"
 #include <stdio.h>
@@ -31,7 +31,7 @@ int testMineCard() {
 
     status = initializeGame(2, k, rand, &G);
 
-    assert (status == 0);
+    myAssert (status == 0);
 
     int pos;
     buyCard(mine, &G);
@@ -51,7 +51,7 @@ int testMineCard() {
                         choices[0], choices[1], choices[2],
                         &G, pos, NULL);
 
-    assert (status == 0);
+    myAssert (status == 0);
 
 
     printf ("testMineCard passes.\n");
