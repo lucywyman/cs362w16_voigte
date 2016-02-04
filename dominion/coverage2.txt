@@ -7,7 +7,7 @@ gcov Output
 ```
 $ gcov dominion.c
 File 'dominion.c'
-Lines executed:17.20% of 564
+Lines executed:39.47% of 565
 Creating 'dominion.c.gcov'
 ```
 
@@ -19,7 +19,7 @@ cardtest1: Segmentation fault (core dumped)
     causing the core dump.
 cardtest2: cardtest2: cardtest2.c:54: testMineCard: Assertion `status == 0' failed
            Aborted (core dumped)
-    I'm actually not sure why this test fails...
+    This test used to core dump, now it just silently fails.
 cardtest3: testSmithyCard passes.
     Test passes. Tests aren't rigorous enough.
 cardtest4: testVillageCard passes
