@@ -1,0 +1,47 @@
+# Random Testers
+
+I wrote a random tester for the Adventurer and Mine cards.
+
+The Mine card was written first and had the most difficult development as a
+result. 
+
+## Testing outline
+
+```
+Run NUM_TESTS tests
+  Do misc setup.
+  Gather data on the deck's state to do with the test
+  Run the execution you're testing
+  Compare the old state vs the new state
+  Teardown
+```
+
+I didn't run any assert statements since those cause make problems, but I did
+tabulate the number of successful and failed runs and report that info at the
+end of the test run.
+
+## Coverage
+
+The coverage from the mine card test was ~25% and for some reason after running
+the adventurer card it was only 26%. This may be a problem with how I'm
+building / running the code but either way this is more coverage than I was
+getting with unit tests so I'm not too salty about it.
+
+For some reason there were actually a lot of failures in the mine card test,
+I'm not sure what was causing the failures but I ended up doing a lot of
+digging into that. My original plan was to manually break the code but as it
+turns out I didn't need to, it was already broken for me.
+
+## Future Improvements
+
+As it stands these tests do minimal checks, only going as far as to check one
+player's hand and only run each game for the first player's turn. I'd like to
+build a full-random tester than plays complete games. There is quite ab it of
+infrastructure involved in building a *good* single card tester, so much so you
+end up getting pretty close to a full random tester.
+
+### TLDR
+
+The tests exist, I'm not super jazzed by them, they're admitidly very inspired
+the existing random tests, but they get the job done and have higher coverage
+than my previous unit tests.

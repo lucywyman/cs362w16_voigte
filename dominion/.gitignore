@@ -16,3 +16,5 @@ playdom
 player
 rngs.o
 testDrawCard
+*.gcov
+*.bak
