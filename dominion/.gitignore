@@ -18,3 +18,4 @@ rngs.o
 testDrawCard
 *.gcov
 *.bak
+testdominion

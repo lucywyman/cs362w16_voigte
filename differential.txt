@@ -1,0 +1,16 @@
+There are no differences between my dominion.c outputs and the two other
+student's dominion.c implementations based on my random tester.
+
+This no doubt means my tester is not thorough enough. That said it's well over
+250 lines now and I'm not really sure the best way to be more through without
+growing this assignment exponentially.
+
+For those interested I also included dominion.c coverage at the end of each
+output, they all agreed on the following:
+
+    File 'dominion.c'
+    Lines executed:46.82% of 581
+    dominion.c:creating 'dominion.c.gcov'
+
+I have included <username>-testdominion.out in this repository so you can view
+the differences easily.
