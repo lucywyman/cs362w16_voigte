@@ -1,0 +1,35 @@
+Report by: Lucy Wyman (wymanl)
+On code written by: Elijah Voigt (voigte)
+For: CS 362 Final Project
+
+Bug 1:
+======
+
+To reproduce:
+-------------
+``make runRandomCard`` once.
+
+The Error:
+----------
+"Status: 51 failures and 175 successful uses of the mine"
+
+Bug:
+----
+It looks like the mine card is failing 25%-50% of the games played, likely
+because the mine card can only be played in certain conditions (if the player
+doesn't have enough gold or has too much copper, or has less than 3 coins,
+and so on), and if those are not fulfilled the mine card returns -1. However,
+the author doesn't check for these conditions before attempting to play 
+the mine card, so if they try to play the mine card there's basically
+just a random chance that the mine card will fail because the gamestate 
+conditions are not met.
+
+The author made note of the error in the original code for ``randomtestcard.c``
+but didn't investigate the error further or determine where the bug might be.
+
+The Solution:
+-------------
+
+Probably just check for conditions before playing the card and play a different
+card if they're not met, or handle the mine card error and play a different 
+card.
